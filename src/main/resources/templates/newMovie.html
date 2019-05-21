@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div class="logo">
+        <img class="image" src='cid:logo'/>
+    </div>
+    <div style="text-align: center">
+        <div>
+            <img class="image" src='cid:imageResourceName'/>
+        </div>
+        <h2>Witaj!</h2>
+        <p>Własnie dodaliśmy nowy film, który może Cie zainteresować.</p>
+        <p th:text="${sinceDate}"></p>
+        <p>Po wiecej informacji odwiedź naszą strone!</p>
+        <p></p>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+    .logo {
+        text-align: center;
+    }
+
+    img.image {
+        max-width: 400px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+</style>

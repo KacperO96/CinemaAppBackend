@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div class="logo">
+        <div>
+            <img class="top" src='cid:logo'/>
+        </div>
+        <h2>Witaj!</h2>
+        <!--<p th:text="${reservation}"></p>-->
+        <p>Zarezerwowano następujące miejsca:</p>
+        <div class="list-group" th:each="item : ${reservation}">
+            <p th:text="${item}"></p>
+        </div>
+        <p th:text="${movie}"></p>
+        <p th:text="${room}"></p>
+        <p th:text="${showDate}"></p>
+        <p th:text="${showProjection}"></p>
+        <p th:text="${showVersion}"></p>
+        <p th:text="${confirmation}"></p>
+        <p>Kod należy podać przy realizacji rezerwacji.</p>
+        <p th:text="${town}"></p>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+    .logo {
+        text-align: center;
+    }
+
+    img.top {
+        max-width: 400px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+
+</style>
